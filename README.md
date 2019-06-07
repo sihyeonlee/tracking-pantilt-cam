@@ -4,3 +4,5 @@ Raspberrypi 3와 pi camera를 활용하여 얼굴을 감지하여 pantilt 방식
 ### Log
 * 2019-06-05
     * mjpg-streamer 설치 및 opencv 4.1에서 http를 통하여 mjpg를 읽어와 얼굴 감지
+* 2019-06-07
+    * Raspberrypi 3 및 Camera, Servo 부품 설계 및 프린팅
