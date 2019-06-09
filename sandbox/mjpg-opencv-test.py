@@ -4,11 +4,9 @@ import sys
 cascPath = 'haarcascade_frontalface_alt.xml'
 faceCascade = cv2.CascadeClassifier(cascPath)
 
-print(faceCascade)
-
 cap = cv2.VideoCapture('http://192.168.1.237:8080/?action=stream&ignored.mjpg')
-cap.set(3, 640) #WIDTH
-cap.set(4, 480) #HEIGHT
+cap.set(3, 640)
+cap.set(4, 480)
 
 while True:
   ret, frame = cap.read()
@@ -16,8 +14,8 @@ while True:
 
   faces = faceCascade.detectMultiScale(
     gray,
-    scaleFactor=1.1,
-    minNeighbors=5,
+    scaleFactor=1.05,
+    minNeighbors=10,
     minSize=(30, 30),
     flags=cv2.CASCADE_SCALE_IMAGE
   )
